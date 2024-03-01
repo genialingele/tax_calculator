@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+
+
+<!--
+Copyright of GENIAL INGELE (2024). This calculator is merely an estimation of what your income tax would cost on a monthly basis. 
+    Hence, GENIAL INGELE is not liable for any inaccuracies found in this code. We are trying to guide you in making a decision in the best way we can, 
+    but the accurate information will be given to you by your employer or tax consultant.
+    NOTE: Data found on this code is based on South African laws and rates of February 2024.
+    
+    DATE: 27 FEBRUARY 2024
+    
+    GENIAL INGELE */
+
+
+    /*TODO 
+    * Automatically separate large numbers with comma or point when typed in.
+-->
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Income Tax Calculator</title>
+        <meta name="description" content="Tax Calculator for individual South Africans">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/styles/style.css">
+        <link rel="icon" type="image/x-icon" href="/img/calgen_sq_white-01.png">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!--START-->
+
+
+        <!--NAV SECTION-->
+        <div class="hero">
+            <img src="/img/calgen_sq_white-01.png" width="72px" height="58px" id="logo">
+            <h1 id="hi">Income Tax Calculator(2024) </h1>
+        </div>
+        
+        <!--WELCOME SECTION-->
+        <div class="welcome">
+            <h2>Hi there!</h2>
+            <p>Want to find out how much income tax you could be paying monthly as an <b>Individual ?</b></p>
+            <p>Let's do it! Find out more information from <a href="https://sars.co.za" target="_blank">(SARS) </a></p>
+        </div>
+         <!--WELCOME SECTION END-->
+        <br>
+
+        <!--CALCULATOR CONTAINER SECTION-->
+        <div class="mainContainer" id="mainContainer">
+            <div class="calculatorContainer">
+                
+                <h2>Income Tax Calculator</h2>
+
+                <form id="calculator_input_form">
+                    <label for="mainIncome">Salary</label><br>
+                    <input type="number"  min="0" id="mainIncome" name="mainIncome" placeholder="Income before deductions..."/><br><br>
+                    <label for="age">Your Age</label><br>
+                    <select id="age">
+                        <option value="64">Under 65</option>
+                        <option value="65">65 and older</option>
+                        <option value="75">75 and older</option>
+                    </select>
+                    <br><br>
+
+                    <div class="seeAdvancedToggle" id="seeAdvancedToggle">
+                    <p>ADVANCED OPTIONS +</p>
+                    </div>
+                    
+                    <!--THE DIV FOR ADDITIONAL EXPENSES-->
+                    <div class="additionalContainer" id="additionalContainer">
+                        <label for="pensionFund">Pension Fund (optional)</label><br>
+                        <input type="number"  min="0" id="pensionFund" placeholder="Monthly amount..." /><br><br>
+                        <label for="providentFund">Provident Fund (optional)</label><br>
+                        <input type="number"  min="0" id="providentFund" placeholder="Monthly amount..." /><br><br>
+                        <label for="monthlyDonations">Donations (optional)</label><br>
+                        <input type="number"  min="0" id="monthlyDonations" placeholder="Total monthly donations..." /><br><br>
+                    </div>
+
+                    <button id="submit" onsubmit="return false">CALCULATE</button>
+                    <button id="reset" onsubmit="return false">RESET</button>
+
+                </form>
+            </div>
+
+            <!--RESULTS CONTAINER SECTION-->
+            <div class="resultsContainer" id="resultsContainer">
+                <h2>Here are your results...</h2>
+                <h3> Take home pay: </h3>
+                <b><h3><span id="netPay"></span> p.m.</b> </h3>
+                <hr>
+                <p>Monthly tax: <b><span id="monthlyTax"></b></span> p.m. </p>
+
+                <p>Taxable income: <b><span id="taxableIncome"></b></span> p.m.</p>
+
+            
+                <p>UIF : <b><span id="UIF"></b></span> p.m.</p>
+                
+                <div id="thankYou">
+                
+                    <img src="img/thank_you_blue_bg_gif.gif">
+                    <h3>Thank you for using my app!</h3>
+                    <p>Remember you can use it as much as you want. <br>For FREE!</p>
+                    
+                </div>
+                <div hidden>
+                <p>Threshold: <b><span id="threshold"></b></span> p.m.</p>
+
+                <p>Rebate: <b><span id="rebate"></b></span> p.m.</p>
+            </div>
+            
+        </div>
+        <!--RESULTS CONTAINER SECTION END-->  
+            
+        </div>
+        <!--CALCULATOR CONTAINER SECTION END-->  
+        <br><br>
+       
+        <button onclick="window.open('https://genialingele.github.io/')" class="see_more_btn">SEE MORE PROJECTS</button>
+
+        <br><br>
+
+        <div id="copyright" class="copyright">
+            <img src="/img/genial_ingele_projects_white_rect-03.png" > <br>
+         <p><em><b>Copyright of GENIAL INGELE (2024).</b>
+            <br> <br>
+            This calculator is merely an estimation of what your income tax would cost on a monthly basis. 
+            Hence, GENIAL INGELE is not liable for any inaccuracies found in this code. 
+            <br>I am trying to guide you in making a decision in the best way we can, 
+            but the accurate information will be given to you by your employer or tax consultant.
+            <br><br> <b>NOTE: Data found on this code is based on South African laws and rates of February 2024,
+            as set by the South African Revenue Service <a href="https://sars.co.za" target="_blank">(SARS) </a></p>
+            
+            <b>DATE: 27 FEBRUARY 2024</b>
+            <br><br>
+            
+            GENIAL INGELE</em>
+            </p>
+        
+        </div>
+               
+
+
+        
+        <script src="/scripts/taxCalculator.js" async defer></script>
+    </body>
+</html>

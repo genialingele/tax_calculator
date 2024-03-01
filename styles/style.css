@@ -1,0 +1,479 @@
+/* Copyright of GENIAL INGELE (2024). This calculator is merely an estimation of what your income tax would cost on a monthly basis. 
+    Hence, GENIAL INGELE is not liable for any inaccuracies found in this code. We are trying to guide you in making a decision in the best way we can, 
+    but the accurate information will be given to you by your employer or tax consultant.
+    NOTE: Data found on this code is based on South African laws and rates of February 2024.
+    
+    DATE: 27 FEBRUARY 2024
+    
+    GENIAL INGELE */
+
+
+    /*TODO 
+    * Automatically separate large numbers with comma or point when typed in.
+    */
+
+
+/* Using the "*" symbol, we are referring to all elements */
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1em;
+}
+
+/*  We are removing the arrows from input field */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  text-align: right;
+}
+
+/* Firefox */
+input[type=number] {
+  text-align: left;
+}
+
+body{
+    font-size: 12pt;
+    background-color: #EEEEEE;
+    margin: 0px;
+    background-image: url("/img/background_arrow-02-02.png");
+    background-attachment: fixed;
+    
+}
+
+
+/* ----- DESKTOP VERSION ------*/
+/* TEXT AND BASICS */
+h1{
+    font-size: 18pt;
+    text-align: center
+}
+
+#plusIcon{
+    color: #ffffff;
+    background-color: #00003a;
+    border-radius: 20px;
+    padding: 1px;
+    vertical-align: text-top;
+}
+
+
+/* INPUTS */
+
+label{
+    font-size: 10pt;
+}
+
+a{
+    color: #0073ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover{
+    color: #024aa0;
+    
+}
+input{
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
+    font-size: 14pt;
+    border: 1px black solid;
+}
+
+select {
+    padding: 10px;
+    width: 150px;
+    border-radius: 5px;
+    font-size: 12pt;
+    border: 1px black solid;
+}
+
+/* BUTTONS */
+button{
+    background-color: black;
+    color: #FFFFFF;
+    padding: 10px;
+    border-radius: 5px;
+    border: 3px #0073ff solid;
+    width: 150px;
+}
+
+button:hover{
+    background-color: #295487;
+    padding: 12px;
+
+}
+
+button[id = reset]{
+    background-color: #ff0000;
+    padding: 12px;
+    border: 3px #3a0000 solid;
+} 
+
+button[id = reset]:hover{
+    background-color: #710000;
+    padding: 12px;
+} 
+
+
+button[id = submit]{
+    background-color: #00003a;
+    padding: 12px;
+    border: 3px #000000 solid;
+} 
+
+button[id = submit]:hover{
+    background-color: #001227;
+    padding: 12px;
+} 
+
+.see_more_btn {
+    width: 300px;
+    background-color:#00003abc ;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+button:active{
+    background-color: #01070e;
+}
+
+input::placeholder{
+    font-size: 10pt;
+}
+
+/* CONTAINERS */
+.hero{
+    background-color: #00003a;
+    padding: 10px;
+    color: #FFFFFF;
+    border-bottom-left-radius: 10px ;
+    border-bottom-right-radius: 10px ;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content:  center ;
+    
+}
+
+#logo{
+   padding: 10px;
+   margin-right: 10px;
+}
+.welcome{
+    padding: 10px;
+    margin: 5px;
+    border-bottom-left-radius: 10px ;
+    border-bottom-right-radius: 10px ;
+    background-color: #aed3ff;
+    text-align: center;
+}
+
+.copyright{
+    background-color: #000000;
+    margin-top: 50px;
+    padding: 20px;
+    color: #ffffff;
+  }
+
+.mainContainer{
+    background-color: #FFFFFF;
+    display: flex;
+    padding: 20px;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    width: 900px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.resultsContainer{
+    background-color: #00003a;
+    padding: 20px;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    width: 100%;
+    border-radius: 10px;
+    color: #FFFFFF;
+    flex: 1;
+}
+
+.calculatorContainer{
+    width: 100%;
+    flex: 1;
+}
+
+.additionalContainer{
+    background-color: #EEEEEE;
+    padding: 10px;
+    margin-bottom: 10px;
+    
+}
+
+.seeAdvancedToggle{
+    background-color: #EEEEEE;
+    color: #000000;
+    padding: 5px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.seeAdvancedToggle:hover{
+    background-color: #0073ff;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.seeAdvancedToggle:active{
+    background-color: #00003a;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 5px;
+
+}
+
+
+
+
+
+/* ----- PHONE VERSION ------*/
+@media screen and (max-width: 420px){
+
+    *{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        line-height: 1.2em;
+        font-size: 11pt;
+        scroll-behavior:smooth;
+        
+    }
+
+    input[type=number] {
+    text-align: left;
+    }
+
+    body{
+        background-color: #EEEEEE;
+        width: 100%;
+        margin: 0px;
+        background-image: url("/img/background_arrow-02-02.png");
+        background-attachment: fixed;
+        scroll-behavior:smooth;
+    }
+
+
+    /* TEXT AND BASICS */
+    h1{
+        font-size: 16pt;
+        text-align: left;
+    }
+
+    h2{
+        font-size: 16pt;
+    } 
+
+    h3{
+        font-size: 12pt;
+    }
+
+    #netPay{
+        font-size: 26pt;
+    }
+
+    #plusIcon{
+        color: #ffffff;
+        background-color: #00003a;
+        border-radius: 20px;
+        padding: 1px;
+        vertical-align: text-top;
+    }
+
+    /* INPUTS */
+
+    label{
+        font-size: 10pt;
+    }
+
+    a{
+        color: #0060d4;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    a:hover{
+        color: #024aa0;
+    }
+
+    input{
+        padding: 10px;
+        width: 200px;
+        border-radius: 5px;
+        font-size: 16pt;
+        border: 1px black solid;
+    }
+
+    select {
+        padding: 10px;
+        width: 150px;
+        border-radius: 5px;
+        font-size: 12pt;
+        border: 1px black solid;
+    }
+
+    /* BUTTONS */
+    button{
+        background-color: black;
+        color: #FFFFFF;
+        padding: 10px;
+        border-radius: 5px;
+        border: 3px #0073ff solid;
+        width: 150px;
+        text-align: center;
+    }
+
+    button:hover{
+        background-color: #295487;
+        padding: 12px;
+    }
+
+    button[id = reset]{
+        background-color: #ff0000;
+        padding: 12px;
+        border: 3px #3a0000 solid;
+    } 
+
+    button[id = reset]:hover{
+        background-color: #710000;
+        padding: 12px;
+    } 
+
+    button[id = submit]{
+        background-color: #00003a;
+        padding: 12px;
+        border: 3px #000000 solid;
+    } 
+
+    button[id = submit]:hover{
+        background-color: #001227;
+        padding: 12px;
+    } 
+
+    .see_more_btn {
+        width: 300px;
+        background-color:#00003ad6 ;
+        text-align: center;
+        color: #FFFFFF;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        position: absolute;
+     
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    button:active{
+        background-color: #01070e;
+    }
+
+    input::placeholder{
+        font-size: 10pt;
+    }
+
+    /* CONTAINERS */
+    .hero{
+        background-color: #00003a;
+        padding: 10px;
+        color: #FFFFFF;
+        border-bottom-left-radius: 10px ;
+        border-bottom-right-radius: 10px ;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content:  center ;
+        margin: 0 auto;
+    }
+
+    #logo{
+    padding: 10px;
+    margin-right: 10px;
+    }
+
+    .welcome{
+        padding: 10px;
+        margin: 5px;
+        border-bottom-left-radius: 10px ;
+        border-bottom-right-radius: 10px ;
+        background-color: #aed3ff;
+        text-align: center;
+    }
+
+    .copyright{
+        background-color: #000000;
+        margin-top: 50px;
+        padding: 20px;
+        color: #ffffff;
+    }
+
+    .mainContainer{
+        background-color: #FFFFFF;
+        padding: 10px;
+        box-shadow: 0px 0px 5px rgb(0, 0, 0);
+        width: 100%;
+        border-radius: 10px;
+        display: block;
+    }
+
+    .calculatorContainer{
+        padding: 5px;
+        width: 100%;
+        background-color: #ffffff;
+        margin-bottom: 20px;
+    }
+
+    .resultsContainer{
+        padding: 10px;
+        width: 100%;
+        background-color: #00003a;
+        border-radius: 10px;
+        color: #FFFFFF;
+    }
+
+    .additionalContainer{
+        background-color: #EEEEEE;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .seeAdvancedToggle{
+        background-color: #EEEEEE;
+        color: #000000;
+        padding: 5px;
+        padding-left: 10px;
+        margin-bottom: 10px;
+    }
+
+    .seeAdvancedToggle:hover{
+        background-color: #0073ff;
+        color: #ffffff;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+
+    .seeAdvancedToggle:active{
+        background-color: #00003a;
+        color: #ffffff;
+        font-weight: bold;
+        border-radius: 10px;
+        padding: 5px;
+
+    }
+        
+}
