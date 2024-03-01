@@ -2,7 +2,7 @@ Tax Calculator
 Web App Brief
 Overview
 
-Tax Calculator is a web app that helps users calculate their income tax for the 2024/2025 tax year in South Africa. It allows users to enter their monthly salary, age, and deductions, and provides them with an estimate of their monthly and annual tax, as well as their net income. Tax Calculator aims to simplify and automate the tax calculation process for individuals, and to help them plan their finances accordingly.
+Tax Calculator is a web app that helps users calculate their income tax for the 2024/2025 tax year in South Africa. It allows users to enter their monthly salary, age, and deductions, and provides them with an estimate of their monthly tax, as well as their net income or "take home pay". Tax Calculator aims to simplify and automate the tax calculation process for individuals, and to help them plan their finances accordingly.
 The tagline is “Calculate your tax in minutes”.
 Target market
 Tax Calculator’s target market is individuals who earn a taxable income in South Africa and want to know how much tax they must pay. According to the South African Revenue Service, there were about 20.4 million registered taxpayers in the country as of February 2023, of which 13.7 million were individuals. The average individual income tax rate was 18.5%, and the total individual income tax revenue was R528.8 billion.
