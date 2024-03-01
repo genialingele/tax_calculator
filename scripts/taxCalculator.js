@@ -323,6 +323,7 @@ function yourMonthlyTaxFunc(taxableIncomeParam){
     else if (screenWidth > 420 && screenWidth <= 760){
         setTimeout(function() {
             mainContainer.style.width = "100%"; //change the size of the main container
+            mainContainer.style.display = "block";
             resultsContainer.style.width = "100%"; //change the size of the main container  
          }, 500);
     }
