@@ -36,7 +36,7 @@ body{
     font-size: 12pt;
     background-color: #EEEEEE;
     margin: 0px;
-    background-image: url("img/background_arrow-02-02.png");
+    background-image: url("../img/background_arrow-02-02.png");
     background-attachment: fixed;
     
 }
@@ -55,6 +55,11 @@ h1{
     border-radius: 20px;
     padding: 1px;
     vertical-align: text-top;
+}
+
+
+#netPay{
+    font-size: 26pt;
 }
 
 
@@ -271,7 +276,7 @@ input::placeholder{
         background-color: #EEEEEE;
         width: 100%;
         margin: 0px;
-        background-image: url("img/background_arrow-02-02.png");
+        background-image: url("../img/background_arrow-02-02.png");
         background-attachment: fixed;
         scroll-behavior:smooth;
     }
